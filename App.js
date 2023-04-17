@@ -37,5 +37,5 @@
 // OK -- useState
 // OK -- ScrollView e TouchableComponents
 // OK -- List e FlatList 
-// 1 OK -- TextInput e onChangeText
+// OK -- TextInput e onChangeText
     
