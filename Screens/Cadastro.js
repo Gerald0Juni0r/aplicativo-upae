@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, ScrollView, View,TextInput, Button, Alert, Image } from 'react-native';
 
-export default function App() {
+export default function CadastroPage() {
     return (
         <View style={styles.container}>
             <Image

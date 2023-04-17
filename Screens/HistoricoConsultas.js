@@ -6,7 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function App() {
+export default function HistoricoConsultasPage() {
   let [nameNotification, setNameNotification] = useState('notifications-none')
   let [nameAjuda, setNameAjuda] = useState('help-circle-outline')
   let [nameHome, setNameHome] = useState('home-circle')
