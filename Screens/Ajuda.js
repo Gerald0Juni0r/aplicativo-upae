@@ -5,86 +5,50 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function HomePage({ navigation }) {
-  let openAjuda = () => {
-    navigation.navigate("Ajuda")
-  }
-  let openPerfil = () => {
-    navigation.navigate("Perfil")
+  let openHome = () => {
+    navigation.navigate("Home")
   }
   let openNotification = () => {
     navigation.navigate("Notification")
   }
-  
-  let openAgendar = () => {
-    navigation.navigate("AgendarConsultas")
-  }
-  let openAcompanharAgendamento = () => {
-    navigation.navigate("AcompanharAgendamentos")
-  }
-  let openHistorico = () => {
-    navigation.navigate("HistoricoConsultas")
+  let openPerfil = () => {
+    navigation.navigate("Perfil")
   }
 
   return (
     <View style={ styles.container }>
       <View style={ styles.header }>
         <Image
-          style={ styles.logoHeader }
-          source={ require('../assets/logoTypes/logoHeader.png') }
+        style={ styles.logoHeader }
+        source={ require('../assets/logoTypes/logoHeader.png') }
         />
         <MaterialIcons 
-          name={ 'notifications-none' } 
-          size={ 30 } 
-          color="black"
-          onPress={ openNotification }
+        name={ 'notifications-none' } 
+        size={ 30 } 
+        color="black"
+        onPress={ openNotification }
         />
       </View>
       <ScrollView style={ styles.scrollViewContainer }>
-        <View style={ styles.homeContainer }>
-          <TouchableOpacity onPress={ openAgendar }>
-            <View style={ styles.sectionAgendar }>
-              <Image
-                style={ styles.sectionImage }
-                source={ require('../assets/Icons/agendar.png') }
-              />
-              <Text>Agendar consulta</Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={ openAcompanharAgendamento }>
-            <View style={ styles.sectionAcompanhar }>
-              <Image
-                style={ styles.sectionImage }
-                source={ require('../assets/Icons/acompanharAgendamento.png') }
-              />
-              <Text>Acompanhar agendamento</Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={ openHistorico }>
-            <View style={ styles.sectionHistoricoConsultas }>
-              <Image
-                style={ styles.sectionImage }
-                source={ require('../assets/Icons/historicoConsultas.png') }
-              />
-              <Text>Histórico de consultas</Text>
-            </View>
-          </TouchableOpacity>
+        <View style={ styles.helpContainer }>
+          <Text>Ajuda</Text>
         </View>
       </ScrollView>
       <View style={ styles.footer }>
         <View style={ styles.buttonFooter }>
           <MaterialCommunityIcons 
-            name={ 'help-circle-outline' } 
+            name={ 'help-circle' } 
             size={ 42 } 
-            color="black" 
-            onPress={ openAjuda }
+            color="black"
           />
           <Text>Ajuda</Text>
         </View>
         <View style={ styles.buttonFooter }>
           <MaterialCommunityIcons 
-            name={ 'home-circle' } 
+            name={ 'home-circle-outline' } 
             size={ 42 } 
             color="black" 
+            onPress={ openHome }
           />
           <Text>Home</Text>
         </View>
@@ -123,7 +87,7 @@ const styles = StyleSheet.create({
     paddingBottom: '15%',
     backgroundColor: '#C9FBFA',
   },
-  homeContainer: {
+  helpContainer: {
     alignItems: 'center',
   },
   sectionAgendar: {

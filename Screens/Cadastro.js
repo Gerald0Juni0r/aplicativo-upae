@@ -78,7 +78,6 @@ export default function CadastroPage({ navigation }) {
         secureTextEntry
         maxLength={ 8 }  
         />
-        <Text style={ styles.lembrarSenha }>Lembrar senha</Text>
       </View>
       <View style={ styles.buttonEntrarContainer }>
         <Button 
@@ -125,13 +124,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#0BB9B7',
     borderRadius: 20,
     width: 180,
-    marginTop: 20,
-    marginBottom: 30,
-  },
-  lembrarSenha: {
-    marginTop: '2%'
+    marginTop: 15,
   },
   direitosReservados: {
-    top: '2%'
+    top: '4%'
   },
 });

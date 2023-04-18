@@ -74,7 +74,6 @@ export default function LoginPage({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-
   container: {
     flex: 1,
     paddingTop: '30%',
@@ -114,6 +113,6 @@ const styles = StyleSheet.create({
     marginBottom: '5%',
   },
   direitosReservados: {
-    top: '30%'
+    top: '25%'
   },
 });

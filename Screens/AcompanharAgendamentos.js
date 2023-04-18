@@ -6,7 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function HistoricoConsultasPage({ navigation }) {
+export default function AcompanharAgendamentosPage({ navigation }) {
 
   let [consultas, setConsultas] = useState([
     { nomeMedico: 'Dr. Geraldo Nunes', especialidade: 'Cardiologista', dataConsulta: '04/04/2023', key: 1 },
@@ -32,50 +32,37 @@ export default function HistoricoConsultasPage({ navigation }) {
     <View style={ styles.container }>
       <View style={ styles.header }>
         <Image
-        style={ styles.logoHeader }
-        source={ require('../assets/logoTypes/logoHeader.png') }
+          style={ styles.logoHeader }
+          source={ require('../assets/logoTypes/logoHeader.png') }
         />
         <MaterialIcons 
-        name={ 'notifications-none' } 
-        size={ 30 } 
-        color="black"
-        onPress={ openNotification }
+          name={ 'notifications-none' } 
+          size={ 30 } 
+          color="black"
+          onPress={ openNotification }
         />
       </View>
-      <View style={ styles.homeContainer }>
+      <ScrollView style={ styles.scrollViewContainer }>
         <TouchableOpacity onPress={ openHome }>
-            <Image
+          <Image
             style={ styles.return }
             source={ require('../assets/Icons/return.png') }
-            />
+          />
         </TouchableOpacity>
-        <View>
-          <View style={ styles.classificacaoTable }>
-            <Text>Médico</Text>
-            <Text>Especialidade</Text>
-            <Text>Data da consulta</Text>
-          </View>
-          <FlatList
-            style={ styles.flatList }
-            numColumns={ 1 }
-            keyExtractor={ (item) => item.key }
-            data = { consultas }
-            renderItem={({ item }) => (
-              <Text style={ styles.dadosTable }> { item.nomeMedico } | { item.especialidade } | { item.dataConsulta } </Text>
-            )}
-          />
+        <View style={ styles.acompanharAgendamentoContainer }>
+          <Text>Acompanhar agendamento</Text>
         </View>
-      </View>
-      <View style={ styles.footer }>
-      <View style={ styles.buttonFooter }>
-          <MaterialCommunityIcons 
-            name={ 'help-circle-outline' } 
-            size={ 42 } 
-            color="black" 
-            onPress={ openAjuda }
-          />
-          <Text>Ajuda</Text>
-        </View>
+      </ScrollView>
+        <View style={ styles.footer }>
+            <View style={ styles.buttonFooter }>
+              <MaterialCommunityIcons 
+                name={ 'help-circle-outline' } 
+                size={ 42 } 
+                color="black" 
+                onPress={ openAjuda }
+              />
+              <Text>Ajuda</Text>
+            </View>
         <View style={ styles.buttonFooter }>
           <MaterialCommunityIcons 
             name={ 'home-circle-outline' } 
@@ -115,41 +102,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  homeContainer: {
+  scrollViewContainer: {
     paddingTop: '2%',
-    paddingBottom: '2%',
+    paddingBottom: '15%',
+  },
+  acompanharAgendamentoContainer: {
+    textAlign: 'center',
   },
   return: {
     left: '5%',
     top: '5%',
-  },
-  flatList: {
-    paddingBottom: '25%',
-    marginBottom: 11
-  },
-  classificacaoTable: {
-    backgroundColor: '#0BB9B7',
-    marginTop: '5%',
-    marginRight: '5%',
-    marginLeft: '5%',
-    paddingTop: '5%',
-    paddingBottom: '5%',
-    paddingLeft: '5%',
-    paddingRight: '5%',
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    borderRadius: '20%',
-    display: 'flex',
-  },
-  dadosTable: {
-    backgroundColor: '#99EBE9',
-    marginTop: '5%',
-    marginRight: '5%',
-    marginLeft: '5%',
-    paddingTop: '5%',
-    paddingBottom: '5%',
-    paddingLeft: '2%',
-    paddingRight: '2%',
   },
   footer: {
     paddingTop: '1%',
