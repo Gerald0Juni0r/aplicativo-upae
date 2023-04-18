@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function HomePage() {
+export default function HomePage({ navigation }) {
   let [nameNotification, setNameNotification] = useState('notifications-none')
   let [nameAjuda, setNameAjuda] = useState('help-circle-outline')
   let [nameHome, setNameHome] = useState('home-circle')
@@ -35,74 +35,84 @@ export default function HomePage() {
     setNamePerfil('person-circle')
   }
 
+  let openAgendar = () => {
+    navigation.navigate("AgendarConsultas")
+  }
+  let openAcompanharAgendamento = () => {
+    navigation.navigate("AcompanharAgendamento")
+  }
+  let openHistorico = () => {
+    navigation.navigate("HistoricoConsultas")
+  }
+
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
+    <View style={ styles.container }>
+      <View style={ styles.header }>
         <Image
-        style={styles.logoHeader}
-        source={require('./assets/logoTypes/logoHeader.png')}
+        style={ styles.logoHeader }
+        source={ require('../assets/logoTypes/logoHeader.png') }
         />
         <MaterialIcons 
         name={ nameNotification } 
-        size={30} 
+        size={ 30 } 
         color="black"
         onPress={ ativarNotification }
         />
       </View>
-      <ScrollView style={styles.scrollViewContainer}>
-        <View style={styles.homeContainer}>
-          <TouchableOpacity>
-            <View style={styles.sectionAgendar}>
+      <ScrollView style={ styles.scrollViewContainer }>
+        <View style={ styles.homeContainer }>
+          <TouchableOpacity onPress={ openAgendar }>
+            <View style={ styles.sectionAgendar }>
               <Image
-              style={styles.sectionImage}
-              source={require('./assets/Icons/agendar.png')}
+              style={ styles.sectionImage }
+              source={ require('../assets/Icons/agendar.png') }
               />
               <Text>Agendar consulta</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <View style={styles.sectionAcompanhar}>
+          <TouchableOpacity onPress={ openAcompanharAgendamento }>
+            <View style={ styles.sectionAcompanhar }>
               <Image
-              style={styles.sectionImage}
-              source={require('./assets/Icons/acompanharAgendamento.png')}
+              style={ styles.sectionImage }
+              source={ require('../assets/Icons/acompanharAgendamento.png') }
               />
               <Text>Acompanhar agendamento</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <View style={styles.sectionHistoricoConsultas}>
+          <TouchableOpacity onPress={ openHistorico }>
+            <View style={ styles.sectionHistoricoConsultas }>
               <Image
-              style={styles.sectionImage}
-              source={require('./assets/Icons/historicoConsultas.png')}
+              style={ styles.sectionImage }
+              source={ require('../assets/Icons/historicoConsultas.png') }
               />
               <Text>Histórico de consultas</Text>
             </View>
           </TouchableOpacity>
         </View>
       </ScrollView>
-      <View style={styles.footer}>
-        <View style={styles.buttonFooter}>
+      <View style={ styles.footer }>
+        <View style={ styles.buttonFooter }>
           <MaterialCommunityIcons 
             name={ nameAjuda } 
-            size={42} 
+            size={ 42 } 
             color="black" 
             onPress={ ativarAjuda }
           />
           <Text>Ajuda</Text>
         </View>
-        <View style={styles.buttonFooter}>
+        <View style={ styles.buttonFooter }>
           <MaterialCommunityIcons 
             name={ nameHome } 
-            size={42} 
+            size={ 42 } 
             color="black" 
             onPress={ ativarHome }
           />
           <Text>Home</Text>
         </View>
-        <View style={styles.buttonFooter}>
+        <View style={ styles.buttonFooter }>
           <Ionicons 
             name={ namePerfil } 
-            size={40}
+            size={ 40 }
             color="black"
             onPress={ ativarPerfil }
           />
