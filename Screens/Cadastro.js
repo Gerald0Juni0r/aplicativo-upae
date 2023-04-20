@@ -115,8 +115,7 @@ const styles = StyleSheet.create({
   inputLogin: {
     paddingLeft: '2%',
     paddingRight: '30%',
-    paddingTop: '2%',
-    paddingBottom: '2%',
+    paddingVertical: '2%',
     backgroundColor: "#C9FBFA",
     borderRadius: 10,
   },

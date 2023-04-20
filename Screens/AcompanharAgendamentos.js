@@ -94,8 +94,7 @@ const styles = StyleSheet.create({
   header: {
     paddingTop: '7%',
     paddingBottom: '2%',
-    paddingLeft: '5%',
-    paddingRight: '5%',
+    paddingHorizontal: '5%',
     backgroundColor: '#99EBE9',
     alignItems: 'center',
     justifyContent: 'center',
@@ -114,10 +113,8 @@ const styles = StyleSheet.create({
     top: '5%',
   },
   footer: {
-    paddingTop: '1%',
-    paddingBottom: '1%',
-    paddingLeft: '5%',
-    paddingRight: '5%',
+    paddingVertical: '1%',
+    paddingHorizontal: '5%',
     backgroundColor: '#99EBE9',
     flexDirection: 'row',
     justifyContent: 'space-between',

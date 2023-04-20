@@ -76,8 +76,7 @@ export default function LoginPage({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: '30%',
-    paddingBottom: '30%',
+    paddingVertical: '30%',
     backgroundColor: '#99EBE9',
     alignItems: 'center',
     justifyContent: 'center',
@@ -97,8 +96,7 @@ const styles = StyleSheet.create({
   inputLogin: {
     paddingLeft: '2%',
     paddingRight: '30%',
-    paddingTop: '2%',
-    paddingBottom: '2%',
+    paddingVertical: '2%',
     backgroundColor: "#C9FBFA",
     borderRadius: 10,
   },

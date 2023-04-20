@@ -81,6 +81,7 @@ export default function HomePage({ navigation }) {
                         Senha atual
                     </Text>
                     <TextInput
+                        keyboardType='numeric'
                         style={ styles.inputLogin }
                         placeholder='********'
                         secureTextEntry
@@ -90,6 +91,7 @@ export default function HomePage({ navigation }) {
                         Nova senha
                     </Text>
                     <TextInput
+                        keyboardType='numeric'
                         style={ styles.inputLogin }
                         placeholder='********'
                         secureTextEntry
@@ -99,6 +101,7 @@ export default function HomePage({ navigation }) {
                         Repetir a nova senha
                     </Text>
                     <TextInput
+                        keyboardType='numeric'
                         style={ styles.inputLogin }
                         placeholder='********'
                         secureTextEntry
@@ -153,14 +156,13 @@ export default function HomePage({ navigation }) {
 
 const styles = StyleSheet.create({
     perfilContainer: {
-      flex: 1,
-      backgroundColor: '#99EBE9',
+        flex: 1,
+        backgroundColor: '#99EBE9',
     },
     header: {
         paddingTop: '7%',
         paddingBottom: '2%',
-        paddingLeft: '5%',
-        paddingRight: '5%',
+        paddingHorizontal: '5%',    
         backgroundColor: '#99EBE9',
         alignItems: 'center',
         justifyContent: 'center',
@@ -182,31 +184,28 @@ const styles = StyleSheet.create({
         textAlign: 'left',      
     },
     textLogin: {
-      marginLeft: '2%',
-      marginTop: '0.5%'
+        marginLeft: '2%',
+        marginTop: '0.5%'
     },
     inputLogin: {
-      paddingLeft: '2%',
-      paddingRight: '30%',
-      paddingTop: '2%',
-      paddingBottom: '2%',
-      backgroundColor: '#99EBE9',
-      borderRadius: 10,
+        paddingLeft: '2%',
+        paddingRight: '30%',      
+        paddingVertical: '2%',
+        backgroundColor: '#99EBE9',
+        borderRadius: 10,
     },
     buttonEntrarContainer: {
-      backgroundColor: '#0BB9B7',
-      borderRadius: 20,
-      width: 180,
-      marginTop: 6,
+        backgroundColor: '#0BB9B7',
+        borderRadius: 20,
+        width: 180,
+        marginTop: 6,
     },
     direitosReservados: {
-      top: '4%'
+        top: '4%'
     },
     footer: {
-        paddingTop: '1%',
-        paddingBottom: '1%',
-        paddingLeft: '5%',
-        paddingRight: '5%',
+        paddingVertical: '1%',
+        paddingHorizontal: '5%',
         backgroundColor: '#99EBE9',
         flexDirection: 'row',
         justifyContent: 'space-between',
