@@ -56,7 +56,6 @@ export default function HomePage({ navigation }) {
                     Nome completo
                     </Text>
                     <TextInput
-                    keyboardType='text'
                     style={ styles.inputLogin }
                     placeholder='João da Silva'
                     />

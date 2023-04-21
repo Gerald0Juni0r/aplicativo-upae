@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput, View, TouchableOpacity, Image, Button } from 'react-native';
+import { StyleSheet, Text, ScrollView, View, TouchableOpacity, Image, FlatList } from 'react-native';
 
 // Icones
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function AgendarConsultasPage({ navigation }) {
-
+export default function CalendarioAgendarConsultasPage({ navigation }) {
+    
   let openAjuda = () => {
     navigation.navigate("Ajuda")
   }
@@ -20,10 +20,10 @@ export default function AgendarConsultasPage({ navigation }) {
   let openNotification = () => {
     navigation.navigate("Notification")
   }
-  let openCalendarioAgendarConsultas = () => {
-    navigation.navigate("CalendarioAgendarConsultas")
+  let openAgendarConsultas = () => {
+    navigation.navigate("AgendarConsultas")
   }
-
+  
   return (
     <View style={ styles.container }>
         <View style={ styles.header }>
@@ -38,40 +38,17 @@ export default function AgendarConsultasPage({ navigation }) {
                 onPress={ openNotification }
             />
         </View>
-        <TouchableOpacity onPress={ openHome }>
-            <Image
-                style={ styles.return }
-                source={ require('../assets/Icons/return.png') }
-            />
-        </TouchableOpacity>
-        <View style={ styles.agendarConsultacontainer }>
-            <Image
-                style={ styles.logoLogin }
-                source={ require('../assets/logoTypes/logo.png') }
-            />
-            <View style={ styles.textAgendarConsultacontainer }>
-                <Text style={ styles.textAgendar }>
-                    Preencha o campo abaixo com o codigo fornecido por seu posto de saúde
-                </Text>
-            </View>
-            <View style={ styles.inputContainer }>
-                <TextInput
-                    position
-                    keyboardType='numeric'
-                    style={ styles.inputCodigoAgendar }
-                    placeholder='CÓDIGO AQUI'
-                    maxLength={ 15 }
+        <ScrollView style={ styles.scrollViewContainer }>
+            <TouchableOpacity onPress={ openAgendarConsultas }>
+                <Image
+                    style={ styles.return }
+                    source={ require('../assets/Icons/return.png') }
                 />
+            </TouchableOpacity>
+            <View style={ styles.calendarioAgendarConsultasContainer }>
+                <Text>Calendário com dias disponíveis para agendar consultas</Text>
             </View>
-            <View style={ styles.buttonContinuarContainer }>
-                <Button 
-                    title="Continuar" 
-                    color={ 'black' }
-                    style={ styles.buttonEntrar }
-                    onPress={ openCalendarioAgendarConsultas }
-                />
-            </View>
-        </View>
+        </ScrollView>
         <View style={ styles.footer }>
             <View style={ styles.buttonFooter }>
                 <MaterialCommunityIcons 
@@ -81,8 +58,8 @@ export default function AgendarConsultasPage({ navigation }) {
                     onPress={ openAjuda }
                 />
                 <Text>Ajuda</Text>
-            </View>
-            <View style={ styles.buttonFooter }>
+                </View>
+                <View style={ styles.buttonFooter }>
                 <MaterialCommunityIcons 
                     name={ 'home-circle-outline' } 
                     size={ 42 } 
@@ -90,8 +67,8 @@ export default function AgendarConsultasPage({ navigation }) {
                     onPress={ openHome }
                 />
                 <Text>Home</Text>
-            </View>
-            <View style={ styles.buttonFooter }>
+                </View>
+                <View style={ styles.buttonFooter }>
                 <Ionicons 
                     name={ 'person-circle-outline' } 
                     size={ 40 }
@@ -100,7 +77,7 @@ export default function AgendarConsultasPage({ navigation }) {
                 />
                 <Text>Perfil</Text>
             </View>
-        </View>
+      </View>
     </View>
   );
 }
@@ -124,40 +101,13 @@ const styles = StyleSheet.create({
         paddingTop: '2%',
         paddingBottom: '15%',
     },
-    agendarConsultasContainer: {
-        alignItems: 'center',
-        justifyContent: 'center',
+    calendarioAgendarConsultasContainer: {
+        paddingVertical: '50%',
+        paddingHorizontal: '20%',
     },
     return: {
-      left: '5%',
-      marginTop: '2%',
-    },
-    agendarConsultacontainer: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingVertical: '25%',
-    },
-    textAgendarConsultacontainer: {
-        textAlign: 'justify',
-        paddingHorizontal: '10%',
-        paddingVertical: '5%',
-    },
-    logoLogin: {
-        marginBottom: 15,
-    },
-    inputCodigoAgendar: {
-        backgroundColor: '#99EBE9',
-        textAlign: 'center',
-        paddingHorizontal: '20%',
-        paddingVertical: '2%',
-        borderRadius: 10,
-    },
-    buttonContinuarContainer: {
-        backgroundColor: '#0BB9B7',
-        borderRadius: 20,
-        width: 180,
-        marginTop: 20,
-        marginBottom: 30,
+        left: '5%',
+        top: '5%',
     },
     footer: {
         paddingVertical: '1%',

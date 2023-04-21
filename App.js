@@ -9,11 +9,13 @@ import Login from './Screens/Login.js';
 import Cadastro from './Screens/Cadastro.js';
 import Home from './Screens/Home.js';
 import AgendarConsultas from './Screens/AgendarConsultas.js';
+import CalendarioAgendarConsultas from './Screens/CalendarioAgendarConsultas.js';
 import AcompanharAgendamentos from './Screens/AcompanharAgendamentos.js';
 import HistoricoConsultas from './Screens/HistoricoConsultas.js';
 import Ajuda from './Screens/Ajuda.js';
 import Perfil from './Screens/Perfil.js';
 import Notification from './Screens/Notification.js';
+import EsqueceuSenha from './Screens/EsqueceuSenha.js';
 
 let Stack = createStackNavigator();
 
@@ -22,8 +24,10 @@ function MyStack() {
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Cadastro" component={Cadastro} />
+      <Stack.Screen name="EsqueceuSenha" component={EsqueceuSenha} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="AgendarConsultas" component={AgendarConsultas} />
+      <Stack.Screen name="CalendarioAgendarConsultas" component={CalendarioAgendarConsultas} />
       <Stack.Screen name="AcompanharAgendamentos" component={AcompanharAgendamentos} />
       <Stack.Screen name="HistoricoConsultas" component={HistoricoConsultas} />
       <Stack.Screen name="Ajuda" component={Ajuda} />

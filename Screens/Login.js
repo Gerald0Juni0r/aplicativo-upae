@@ -18,10 +18,12 @@ export default function LoginPage({ navigation }) {
       routes: [{ name:"Cadastro" }],
     })
   }
+  let openEsqueceuSenha = () => {
+    navigation.navigate("EsqueceuSenha")
+  }
 
   return (
     <ScrollView style={ styles.scrollcontainer }>
-
       <View style={ styles.container }>
         <Image
           style={ styles.logoLogin }
@@ -58,10 +60,12 @@ export default function LoginPage({ navigation }) {
             onPress={ openHome }
           />
         </View>
-        <Text style={ styles.esqueceuSenha }>
+        <Text onPress={ openEsqueceuSenha } style={ styles.esqueceuSenha }>
           Esqueceu a senha?
         </Text>
-        <Text onPress={ openCadastrar }>Cadastrar-se</Text>
+        <Text onPress={ openCadastrar }>
+          Cadastre-se
+        </Text>
 
         <View style={ styles.direitosReservados }>
             <Text>

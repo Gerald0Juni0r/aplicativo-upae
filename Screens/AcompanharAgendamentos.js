@@ -106,7 +106,9 @@ const styles = StyleSheet.create({
     paddingBottom: '15%',
   },
   acompanharAgendamentoContainer: {
-    textAlign: 'center',
+    paddingVertical: '50%',
+    paddingHorizontal: '20%',
+    alignItems: 'center',
   },
   return: {
     left: '5%',

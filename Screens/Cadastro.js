@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, ScrollView, View,TextInput, Button, Alert, Image } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View,TextInput, Button, Alert, Image } from 'react-native';
 
 export default function CadastroPage({ navigation }) {
   let openLogin = () => {
@@ -11,6 +11,14 @@ export default function CadastroPage({ navigation }) {
 
   return (
     <View style={ styles.container }>
+      <View style={ styles.returnContainer }>
+          <TouchableOpacity onPress={ openLogin }>
+              <Image
+              style={ styles.return }
+              source={ require('../assets/Icons/return.png') }
+              />
+          </TouchableOpacity>
+      </View>
       <Image
         style={ styles.logoLogin }
         source={ require('../assets/logoTypes/logo.png') }
@@ -20,7 +28,6 @@ export default function CadastroPage({ navigation }) {
         Nome completo
         </Text>
         <TextInput
-        keyboardType='text'
         style={ styles.inputLogin }
         placeholder='João da Silva'
         />
@@ -81,7 +88,7 @@ export default function CadastroPage({ navigation }) {
       </View>
       <View style={ styles.buttonEntrarContainer }>
         <Button 
-        title="Cadastrar-se" 
+        title="Cadastre-se" 
         color={ 'black' }
         style={ styles.buttonEntrar }
         onPress={ openLogin }
@@ -102,6 +109,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#99EBE9',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  returnContainer: {
+    position: 'absolute',
+    left: '5%',
+    top: '11%',
   },
   logoLogin: {
     marginBottom: 10,
