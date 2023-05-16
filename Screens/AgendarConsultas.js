@@ -127,6 +127,7 @@ const styles = StyleSheet.create({
     agendarConsultasContainer: {
         alignItems: 'center',
         justifyContent: 'center',
+        paddingVertical: '15%',
     },
     return: {
       left: '5%',

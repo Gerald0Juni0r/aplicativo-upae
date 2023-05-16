@@ -102,7 +102,7 @@ export default function HistoricoConsultasPage({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#C9FBFA',
+    backgroundColor: '#C9FBFA',    
   },
   header: {
     paddingTop: '7%',
@@ -115,7 +115,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   homeContainer: {
-    paddingVertical: '2%',
+    paddingTop: '2%',
+    paddingBottom: '2%',
+    // paddingBottom: 0, pra iphone 7
   },
   return: {
     left: '5%',
@@ -148,6 +150,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#99EBE9',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    // bottom:'-8%' pra iphone 7
   },
   buttonFooter: {
     alignItems: 'center',

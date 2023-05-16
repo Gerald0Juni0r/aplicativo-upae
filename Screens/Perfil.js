@@ -178,6 +178,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#C9FBFA',
+        paddingBottom: '15%',
     },
     inputContainer: {
         textAlign: 'left',      
