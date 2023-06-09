@@ -46,11 +46,11 @@ export default function HomePage({ navigation }) {
                 <Text>Sair</Text>
             </View>
             <View style={ styles.container }>
-                <Ionicons 
+                {/* <Ionicons 
                     name={ 'person-circle-outline' } 
                     size={ 75 }
                     color="black"
-                />
+                /> */}
                 <View style={ styles.inputContainer }>
                     <Text style={ styles.textLogin }>
                     Nome completo
@@ -178,7 +178,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#C9FBFA',
-        paddingBottom: '15%',
+        paddingBottom: '20%',
+        paddingTop: '2%',
     },
     inputContainer: {
         textAlign: 'left',      
@@ -198,7 +199,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#0BB9B7',
         borderRadius: 20,
         width: 180,
-        marginTop: 6,
+        marginTop: 15,
     },
     direitosReservados: {
         top: '4%'
