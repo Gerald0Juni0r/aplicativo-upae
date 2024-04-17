@@ -3536,11 +3536,11 @@ finalhandler@1.1.2:
     unpipe "~1.0.0"
 
 find-babel-config@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/find-babel-config/-/find-babel-config-1.2.0.tgz#a9b7b317eb5b9860cda9d54740a8c8337a2283a2"
-  integrity sha512-jB2CHJeqy6a820ssiqwrKMeyC6nNdmrcgkKWJWmpoxpE8RKciYJXCcXRq1h2AzCo5I5BJeN2tkGEO3hLTuePRA==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/find-babel-config/-/find-babel-config-1.2.1.tgz#132e8fbcbfccbc3c91d9c2dec741ff1667060a63"
+  integrity sha512-mP4klVCAYHgRyY2TNSfgk8RSVvpFx5Ug0p9Bca0c5lTk1lUS5p/UcCqvIUdSPtUJgf2syBsdPGTKqTd5NjC5gg==
   dependencies:
-    json5 "^0.5.1"
+    json5 "^2.2.3"
     path-exists "^3.0.0"
 
 find-cache-dir@^2.0.0:
@@ -4430,12 +4430,7 @@ json-schema-deref-sync@^0.13.0:
     traverse "~0.6.6"
     valid-url "~1.0.9"
 
-json5@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
-  integrity sha512-4xrs1aW+6N5DalkqSVA8fxh458CXvR99WU8WLKmq4v8eWAL86Xo3BVqyd3SkA9wEVjCMqyvvRRkshAdOnBp5rw==
-
-json5@^2.2.2:
+json5@^2.2.2, json5@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
